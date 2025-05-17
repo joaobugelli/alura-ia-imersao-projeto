@@ -123,11 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  //   // Adiciona listener para todos os botões "Voltar para o Início"
-  //   botoesVoltarInicio.forEach((button) => {
-  //     button.addEventListener("click", resetAndGoHome);
-  //   });
-
   if (botoesVoltarInicio) {
     // Verifica se o elemento existe
     botoesVoltarInicio.addEventListener("click", resetAndGoHome);
@@ -147,14 +142,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Função para exibir as recomendações ---
 
   function displayRecommendations(recommendationsText) {
-    // A resposta da IA já vem formatada como texto com os marcadores/lista.
-    // Podemos simplesmente colocar esse texto na div de resultado.
-    // Se a IA retornasse JSON, precisaríamos parsear e formatar aqui.
-    // Garante que o conteúdo é tratado como texto antes de substituir quebras de linha
-    resultadoRecomendacoesDiv.innerHTML = String(recommendationsText).replace(
-      /\n/g,
-      "<br>"
-    );
+    // A resposta da IA vem como texto, potencialmente com formatação Markdown (como **negrito**).
+    // Usamos a biblioteca Marked.js (disponível globalmente como 'marked') para converter o Markdown para HTML.
+    // marked.parse() (ou apenas marked() em versões mais recentes) faz a conversão.
+    // Certificamo-nos de passar o texto como String, caso venha algo inesperado.
+    const recommendationsHtml = marked.parse(String(recommendationsText));
+
+    // Inserimos o HTML gerado na div de resultados.
+    // O navegador interpretará as tags HTML (como <strong>, <li>, <p>) e exibirá formatado.
+    resultadoRecomendacoesDiv.innerHTML = recommendationsHtml;
   }
 
   // Inicializa mostrando a primeira tela ao carregar a página
