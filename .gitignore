@@ -3,7 +3,8 @@
 
 # Ignorar o ambiente virtual
 venv/
-.venv/ # Pode ser que o ambiente virtual seja criado como .venv em alguns casos
+.venv/
+
 
 # Ignorar cache do Python
 __pycache__/
