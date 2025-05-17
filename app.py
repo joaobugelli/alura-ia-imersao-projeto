@@ -74,7 +74,7 @@ def recommend():
         1. Analise as séries favoritas e a vibe para entender as preferências.
         2. Identifique 3 séries que combinem com suas favoritas ou sua vibe atual.
         3. Formate cada recomendação usando **Markdown** conforme o **EXEMPLO DE FORMATO DE SAÍDA** abaixo.
-        4. Recomende EXATAMENTE 5 opções de séries.
+        4. Recomende EXATAMENTE de 3 a 5 opções de séries relevantes para o contexto do usuário.
         5. Use titulo nivel 2 para o título da série
         5. Use o **negrito** os rótulos "Sinopse:" e "Porquê você vai amar:".
         6. Use lista com marcadores (`-`) para os itens de Sinopse e Porquê dentro de cada recomendação.
@@ -100,7 +100,7 @@ def recommend():
            
         - *Porquê você vai amar:* Explicação personalizada aqui conectando com as séries favoritas ({series_favoritas}) e a vibe atual ({vibe_atual}).
 
-        Gere apenas o texto das 5 recomendações formatado estritamente seguindo este EXEMLO DE FORMATO DE SAÍDA em Markdown, SEM numerar os itens.
+        Gere apenas o texto das recomendações (de 3 a 5 séries) formatado estritamente seguindo este EXEMLO DE FORMATO DE SAÍDA em Markdown, SEM numerar os itens.
         """
 
         print("Enviando prompt para a IA...")
