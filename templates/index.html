@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sua Próxima Série</title>
@@ -20,7 +26,7 @@
 
     <div id="tela-favoritas" class="screen hidden">
       <button id="btn-voltar" class="btn-voltar">Voltar</button>
-      <p>Quais são suas séries favoritas?</p>
+      <h3>Quais são suas séries favoritas?</h3>
       <textarea
         id="input-favoritas"
         rows="4"
@@ -31,7 +37,7 @@
 
     <div id="tela-vibe" class="screen hidden">
       <button id="btn-voltar-vibe" class="btn-voltar">Voltar</button>
-      <p>Qual a vibe que você está buscando?</p>
+      <h3>Qual a vibe que você está buscando?</h3>
       <textarea
         id="input-vibe"
         rows="4"
@@ -46,7 +52,7 @@
     </div>
 
     <div id="tela-resultado" class="screen hidden">
-      <h2>Recomendações para você</h2>
+      <h3>Recomendações para você</h3>
       <div id="resultado-recomendacoes"></div>
       <button id="btn-recomecar" class="btn-recomecar">Recomeçar</button>
     </div>

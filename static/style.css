@@ -1,7 +1,7 @@
 /* style.css */
 
 body {
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,14 +29,27 @@ body {
   display: none;
 }
 
-h1,
+h1 {
+  color: #e7e7e7;
+  margin-bottom: 0px 0px 30px 0px;
+  font-size: 2.7em;
+}
+
 h2 {
-  color: #e7e7e7; /* Cor neon/destaque */
-  margin-bottom: 50px;
+  color: #e7e7e7;
+  margin: 50px 0px 0px 0px;
+  font-size: 2em;
+}
+
+h3 {
+  color: #e7e7e7;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
 
 p {
-  font-size: 2em;
+  font-size: 1.2em;
   margin-bottom: 15px;
   line-height: 1.5;
 }
@@ -62,7 +75,7 @@ textarea:focus {
 button {
   padding: 20px 0px;
   width: calc(100% - 10px);
-  background-color: #b7b7b7;
+  background-color: #cfcfcf;
   color: #000;
   border: none;
   border-radius: 20px;
@@ -78,7 +91,7 @@ button:hover {
 }
 
 .btn-comecar {
-  background-color: #013013;
+  background-color: #005721;
   width: calc(100% - 10px);
   /* border: 0.2em solid rgb(118, 185, 0); */
   /* box-shadow: 0px 0px 5px 5px #ffffff; */
@@ -91,7 +104,7 @@ button:hover {
 }
 
 .btn-comecar:hover {
-  background-color: #0d530d; /* Cor de fundo ao passar o mouse */
+  background-color: #002700; /* Cor de fundo ao passar o mouse */
   color: #ffffff; /* Cor do texto ao passar o mouse */
   /* box-shadow: 0px 0px 10px 0px #91ff91; */
 }
