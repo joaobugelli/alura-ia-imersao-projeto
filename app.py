@@ -27,7 +27,7 @@ genai.configure(api_key=GOOGLE_API_KEY)
 
 # Usa o modelo gemini-2.0-flash conforme solicitado.
 # Não passamos a lista de tools_spec, pois não vamos usar ferramentas.
-model = genai.GenerativeModel(model_name='gemini-2.0-flash')
+model = genai.GenerativeModel(model_name='gemini-2.5-flash-preview-04-17')
 
 
 # --- Rotas do Flask ---
