@@ -71,33 +71,31 @@ def recommend():
         Vibe Atual do Usuário: {vibe_atual}
 
         Instruções para a recomendação:
+        1. Analise as séries favoritas e a vibe para entender as preferências.
+        2. Identifique 3 séries ou filmes que combinem.
+        3. Formate cada recomendação usando **Markdown** conforme o **EXEMPLO DE FORMATO DE SAÍDA** abaixo.
+        4. Recomende EXATAMENTE 3 opções (séries ou filmes).
+        5. Use o **negrito** para o título da série, e para os rótulos "Sinopse:" e "Porquê você vai amar:".
+        6. Use lista numerada (`1.`, `2.`, `3.`) para cada recomendação principal.
+        7. Use lista com marcadores (`*` ou `-`) para os itens de Sinopse e Porquê dentro de cada recomendação.
 
-        1. Analise as séries favoritas para entender o estilo, gênero e temas que o usuário gosta.
-        2. Considere a vibe atual do usuário para ajustar as recomendações (ex: algo leve para vibe tranquila, algo complexo para vibe reflexiva).
-        3. Se precisar de informações sobre as séries mencionadas ou sobre as séries que você pretende recomendar para garantir que se encaixam.
-        4. Recomende APENAS 3 opções de séries, sendo as mais relevantes.
-        5. Para cada recomendação, forneça:
-                - O Título.
-                - Uma Sinopse MUITO breve (máximo 2 frases).
-                - Um "Porquê Você Vai Amar": Explique ESPECIFICAMENTE por que aquela sériecombina com as séries favoritas e a vibe atual do usuário. Seja personalizado!
-        6. Formate a resposta de forma clara e fácil de ler. Use marcadores ou listas.
 
-        Siga estritamente o template a seguir para o formato de saída e não adicione nada mais (nem mesmo um texto de introdução ou conclusão):
+        EXEMPLO DE FORMATO DE SAÍDA (em Markdown):
 
-        1. Nome da Série 1
-        - Sinopse: [breve sinpse]
-        - Porquê você vai amar: [breve explicação personalizada conectando com séries favoritas e vibe].
+        EXEMPLO DE FORMATO DE SAÍDA (em Markdown):
+        1. **Título da Série/Filme 1**
+           * **Sinopse:** Sinopse breve aqui.
+           * **Porquê você vai amar:** Explicação personalizada aqui conectando com as séries favoritas ({series_favoritas}) e a vibe atual ({vibe_atual}).
 
-        2. Nome da Série 2
-        - Sinopse: [breve sinpse]
-        - Porquê você vai amar: [breve explicação personalizada conectando com séries favoritas e vibe].
+        2. **Título da Série/Filme 2**
+           * **Sinopse:** Sinopse breve aqui.
+           * **Porquê você vai amar:** Explicação personalizada aqui conectando com as séries favoritas ({series_favoritas}) e a vibe atual ({vibe_atual}).
 
-        3. Nome da Série 3
-        - Sinopse: [breve sinpse]
-        - Porquê você vai amar: [breve explicação personalizada conectando com séries favoritas e vibe].
+        3. **Título da Série/Filme 3**
+           * **Sinopse:** Sinopse breve aqui.
+           * **Porquê você vai amar:** Explicação personalizada aqui conectando com as séries favoritas ({series_favoritas}) e a vibe atual ({vibe_atual}).
 
-        
-        Seja criativo e útil!
+        Gere apenas o texto das 3 recomendações formatado estritamente seguindo este EXEMLO DE FORMATO DE SAÍDA em Markdown.
         """
 
         print("Enviando prompt para a IA...")
