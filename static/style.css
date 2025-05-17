@@ -147,6 +147,12 @@ button:hover {
   margin-top: 25px;
 }
 
+.txt-loading {
+  font-size: 1.2em;
+  text-align: left;
+  margin-left: 25%;
+}
+
 /* Estilo para a área de resultados */
 #resultado-recomendacoes {
   text-align: left; /* Alinha o texto das recomendações à esquerda */
@@ -205,16 +211,18 @@ button:hover {
     font-size: 1.4em;
   }
 
-  h3 {
-    font-size: 1.2em;
-  }
-
   p {
     font-size: 1em;
   }
 
   button {
     font-size: 1em;
-    padding: 15px 15px;
+    padding: 20px 15px;
+  }
+
+  .txt-loading {
+    font-size: 1.2em;
+    text-align: left;
+    margin-left: 50px;
   }
 }
