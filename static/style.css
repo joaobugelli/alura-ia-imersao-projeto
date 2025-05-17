@@ -1,0 +1,202 @@
+/* style.css */
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #000; /* Fundo preto inicial */
+  color: #fff; /* Texto branco inicial */
+  transition: background-color 0.5s, color 0.5s; /* Transição suave */
+  padding: 20px; /* Espaçamento interno geral */
+  box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+/* Estilo para cada tela */
+.screen {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px; /* Largura máxima para telas maiores */
+  width: 100%; /* Ocupa a largura total em telas menores */
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+/* Classe para esconder telas */
+.hidden {
+  display: none;
+}
+
+h1,
+h2 {
+  color: #e7e7e7; /* Cor neon/destaque */
+  margin-bottom: 50px;
+}
+
+p {
+  font-size: 2em;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+textarea {
+  width: calc(100% - 10px); /* Ocupa quase toda a largura - padding */
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 0.2em solid black;
+  background-color: #141414;
+  color: #fff;
+  font-size: 1.2em;
+  border-radius: 1.2em;
+  resize: vertical; /* Permite redimensionar verticalmente */
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  outline: none;
+  /* Outras propriedades de estilo, se necessário */
+}
+
+button {
+  padding: 20px 0px;
+  width: calc(100% - 10px);
+  background-color: #b7b7b7;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background: #013013;
+  color: #ffffff; /* Cor do texto do botão */
+}
+
+.btn-comecar {
+  background-color: #013013;
+  width: calc(100% - 10px);
+  /* border: 0.2em solid rgb(118, 185, 0); */
+  /* box-shadow: 0px 0px 5px 5px #ffffff; */
+  color: #ffffff; /* Cor do texto do botão */
+  padding: 20px 50px; /* Espaçamento interno do botão */
+  font-size: 1.1em; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+  /* font-weight: bold; */
+}
+
+.btn-comecar:hover {
+  background-color: #0d530d; /* Cor de fundo ao passar o mouse */
+  color: #ffffff; /* Cor do texto ao passar o mouse */
+  /* box-shadow: 0px 0px 10px 0px #91ff91; */
+}
+
+/* Estilo específico para o botão voltar */
+.btn-voltar {
+  position: absolute; /* Posição absoluta dentro da .screen */
+  top: 20px; /* 10px do topo */
+  left: 20px; /* 10px da esquerda */
+  width: 10%;
+  padding: 10px 10px; /* Padding menor */
+  font-size: 0.9em; /* Fonte menor */
+  background-color: #202020; /* Cor mais discreta */
+  color: #fff;
+  margin: 0; /* Remove margem extra */
+}
+
+.btn-voltar:hover {
+  background-color: #383838;
+}
+
+/* Estilo específico para o botão voltar */
+.btn-voltar-vibe {
+  position: absolute; /* Posição absoluta dentro da .screen */
+  top: 10px; /* 10px do topo */
+  left: 10px; /* 10px da esquerda */
+  padding: 5px 10px; /* Padding menor */
+  font-size: 0.9em; /* Fonte menor */
+  background-color: #555; /* Cor mais discreta */
+  color: #fff;
+  margin: 0; /* Remove margem extra */
+}
+
+.btn-voltar-vibe:hover {
+  background-color: #777;
+}
+
+.btn-recomecar {
+  margin-top: 25px;
+}
+
+/* Estilo para a área de resultados */
+#resultado-recomendacoes {
+  text-align: left; /* Alinha o texto das recomendações à esquerda */
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #555; /* Linha divisória */
+}
+
+#resultado-recomendacoes p {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #444; /* Linha tracejada entre recomendações */
+}
+
+#resultado-recomendacoes p:last-child {
+  border-bottom: none; /* Remove a linha tracejada da última recomendação */
+  padding-bottom: 0;
+}
+
+/* Estilo para a animação de carregamento */
+.loading-dots::after {
+  content: "";
+  animation: loading 1s infinite;
+}
+
+@keyframes loading {
+  0% {
+    content: ".";
+  }
+  33% {
+    content: "..";
+  }
+  66% {
+    content: "...";
+  }
+  100% {
+    content: "";
+  } /* Reseta para simular ciclo */
+}
+
+/* Responsividade básica */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .screen {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 8px 15px;
+  }
+}

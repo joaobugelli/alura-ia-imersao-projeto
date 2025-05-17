@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sua Próxima Série</title>
+    <!-- <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </head>
+  <body>
+    <div id="tela-inicial" class="screen">
+      <h1>Encontre sua próxima série favorita!</h1>
+      <button class="btn-comecar" id="btn-comecar">começar</button>
+    </div>
+
+    <div id="tela-favoritas" class="screen hidden">
+      <button id="btn-voltar" class="btn-voltar">Voltar</button>
+      <p>Quais são suas séries favoritas?</p>
+      <textarea
+        id="input-favoritas"
+        rows="4"
+        placeholder="Ex: The Last of Us, Stranger Things, Dark"
+      ></textarea>
+      <button id="btn-enviar-favoritas">próximo</button>
+    </div>
+
+    <div id="tela-vibe" class="screen hidden">
+      <button id="btn-voltar-vibe" class="btn-voltar">Voltar</button>
+      <p>Qual a vibe que você está buscando?</p>
+      <textarea
+        id="input-vibe"
+        rows="4"
+        placeholder="Ex: Quero algo para relaxar e rir, ou algo que me faça pensar e com reviravoltas"
+      ></textarea>
+      <button id="btn-enviar-vibe">enviar</button>
+    </div>
+
+    <div id="tela-carregando" class="screen hidden">
+      <button id="btn-voltar" class="btn-voltar">Voltar</button>
+      <p>Buscando sua próxima série<span class="loading-dots">.</span></p>
+    </div>
+
+    <div id="tela-resultado" class="screen hidden">
+      <h2>Recomendações para você</h2>
+      <div id="resultado-recomendacoes"></div>
+      <button id="btn-recomecar" class="btn-recomecar">Recomeçar</button>
+    </div>
+
+    <!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
+  </body>
+</html>
