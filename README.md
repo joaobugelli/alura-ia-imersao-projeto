@@ -1,5 +1,6 @@
 # ▶️ PróximoPlay - Encontre sua próxima série favorita!
 
+[![Watch the video](https://img.youtube.com/vi/dyp5yn_5Abo/hqdefault.jpg)](https://youtu.be/dyp5yn_5Abo)
 
 
 ## ✨ Sobre
